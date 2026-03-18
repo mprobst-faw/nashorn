@@ -640,7 +640,7 @@ public enum JSType {
     public static boolean isNumber(final Object obj) {
         if (obj != null) {
             final Class<?> c = obj.getClass();
-            return c == Integer.class || c == Double.class || c == Float.class || c == Short.class || c == Byte.class;
+            return c == Integer.class || c == Long.class || c == Double.class || c == Float.class || c == Short.class || c == Byte.class;
         }
         return false;
     }
