@@ -33,27 +33,27 @@ questions.
   <version>NASHORN_VERSION</version>
   <packaging>jar</packaging>
   <description>Nashorn is an Open Source JavaScript (ECMAScript 5.1 and some 6 features) engine for the JVM.</description>
-  <url>https://github.com/openjdk/nashorn</url>
+  <url>https://github.com/mprobst-faw/nashorn</url>
 
   <licenses>
     <license>
       <name>GNU General Public License v2.0 w/Classpath exception</name>
-      <url>https://github.com/openjdk/nashorn/blob/main/LICENSE</url>
+      <url>https://github.com/mprobst-faw/nashorn/blob/main/LICENSE</url>
     </license>
   </licenses>
 
   <developers>
     <developer>
-      <name>Attila Szegedi</name>
-      <email>szegedia@gmail.com</email>
-      <url>http://github.com/szegedi</url>
+      <name>Michael Probst</name>
+      <email>mprobst@faw.at</email>
+      <url>http://github.com/mprobst-faw</url>
     </developer>
   </developers>
   
   <scm>
-    <connection>scm:git:git://github.com/openjdk/nashorn.git</connection>
-    <developerConnection>scm:git:ssh://github.com:openjdk/nashorn.git</developerConnection>
-    <url>http://github.com/openjdk/nashorn/tree/main</url>
+    <connection>scm:git:git://github.com/mprobst-faw/nashorn.git</connection>
+    <developerConnection>scm:git:ssh://github.com:mprobst-faw/nashorn.git</developerConnection>
+    <url>http://github.com/mprobst-faw/nashorn/tree/main</url>
   </scm>
 
   <dependencies>
