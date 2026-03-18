@@ -291,9 +291,17 @@ public abstract class ArrayData {
         final Class<?> clazz = array.getClass();
 
         if (clazz == int[].class) {
-            return new IntArrayData((int[])array, ((int[])array).length);
+            final Object[] oarray = new Object[((int[]) array).length];
+            for (int index = 0; index < ((int[]) array).length; index++) {
+                oarray[index] = ((int[]) array)[index];
+            }
+            return new ObjectArrayData(oarray, oarray.length);
         } else if (clazz == double[].class) {
-            return new NumberArrayData((double[])array, ((double[])array).length);
+            final Object[] oarray = new Object[((double[]) array).length];
+            for (int index = 0; index < ((double[]) array).length; index++) {
+                oarray[index] = ((double[]) array)[index];
+            }
+            return new ObjectArrayData(oarray, oarray.length);
         } else {
             return new ObjectArrayData((Object[])array, ((Object[])array).length);
         }
@@ -306,7 +314,11 @@ public abstract class ArrayData {
      * @return the ArrayData
      */
     public static ArrayData allocate(final int[] array) {
-         return new IntArrayData(array, array.length);
+        final Object[] oarray = new Object[array.length];
+        for (int index = 0; index < array.length; index++) {
+            oarray[index] = array[index];
+        }
+        return new ObjectArrayData(oarray, oarray.length);
     }
 
     /**
@@ -316,7 +328,11 @@ public abstract class ArrayData {
      * @return the ArrayData
      */
     public static ArrayData allocate(final double[] array) {
-        return new NumberArrayData(array, array.length);
+        final Object[] oarray = new Object[array.length];
+        for (int index = 0; index < array.length; index++) {
+            oarray[index] = array[index];
+        }
+        return new ObjectArrayData(oarray, oarray.length);
     }
 
     /**
